@@ -28,6 +28,11 @@ extension UIColor {
         return UIColor(red: 0.93, green: 0.13, blue: 0.23, alpha: 1)
     }
     
+    /// - 0, 49, 241
+    public class var blueDark: UIColor {
+        return UIColor(red: 0, green: 0.19, blue: 0.94, alpha: 1)
+    }
+    
     // Custom color with hex value
     public class func customColor(hex: String, alpha: CGFloat = 1.0) -> UIColor {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)

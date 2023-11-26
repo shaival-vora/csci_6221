@@ -18,6 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     
+    @IBAction func loginButtonClick(_ sender: Any) {
+        let mainTabBarController = TabbarController()
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.pushViewController(mainTabBarController, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.resetData()
