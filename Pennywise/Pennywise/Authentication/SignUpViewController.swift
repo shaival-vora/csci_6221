@@ -31,6 +31,7 @@ final class SignUpViewController: UIViewController {
         signUpButtonClick()
     }
     
+    private var dataValidationDelegate: DataValidation? = DataValidator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,35 +149,35 @@ final class SignUpViewController: UIViewController {
               !password.isEmpty,
               let confirmPassword = confirmPasswordTextField.text,
               !confirmPassword.isEmpty else {
-            self.showToast(message: "Enter all the Fields For creating an account")
-            return
-        }
-        
-        // Validate email
-        guard isValidEmail(emailId) else {
-            // Handle invalid email
-            print("Invalid email format")
+            self.showToast(message: "Enter all the Fields to create an new user account")
             return
         }
         
         // Validate full name
-        guard isValidFullName(fullName) else {
+        guard dataValidationDelegate?.isValidFullName(fullName) == true else {
             // Handle invalid full name
-            print("Invalid full name format")
+            showToast(message: "User name can contain only alphabet")
+            return
+        }
+        
+        // Validate email
+        guard dataValidationDelegate?.isValidEmail(emailId) == true else {
+            // Handle invalid email
+            showToast(message: "Invalid email format")
             return
         }
         
         // Validate password
-        guard isValidPassword(password) else {
+        guard dataValidationDelegate?.isValidPassword(password) == true else {
             // Handle invalid password
-            print("Invalid password format")
+            showToast(message: "Invalid password format. password should have more then 6 letters")
             return
         }
         
         // Confirm password
         guard password == confirmPassword else {
             // Handle password mismatch
-            print("Passwords do not match")
+            showToast(message: "Passwords do not match")
             return
         }
         
@@ -194,23 +195,5 @@ final class SignUpViewController: UIViewController {
     }
     
     
-    // MARK: - Validation Functions
-
-        func isValidEmail(_ email: String) -> Bool {
-            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-            let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
-            return emailPredicate.evaluate(with: email)
-        }
-
-        func isValidFullName(_ fullName: String) -> Bool {
-            let nameRegex = "^[a-zA-Z ]+$"
-            let namePredicate = NSPredicate(format:"SELF MATCHES %@", nameRegex)
-            return namePredicate.evaluate(with: fullName)
-        }
-
-        func isValidPassword(_ password: String) -> Bool {
-            // Customize password validation based on your requirements
-            return password.count >= 6
-        }
-    
 }
+

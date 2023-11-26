@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1624E7E2B13E6D400157890 /* DataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1624E7D2B13E6D400157890 /* DataValidator.swift */; };
 		E1C300312B129DD500AD65B7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300302B129DD500AD65B7 /* UIColorExtension.swift */; };
 		E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300322B129F6800AD65B7 /* CommonStrings.swift */; };
 		E1C300382B12AD8B00AD65B7 /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1624E7D2B13E6D400157890 /* DataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidator.swift; sourceTree = "<group>"; };
 		E1C300302B129DD500AD65B7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E1C300322B129F6800AD65B7 /* CommonStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStrings.swift; sourceTree = "<group>"; };
 		E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				E1D4E6712AF1AD4D00D5E572 /* ViewController.swift */,
 				E1C3003B2B12BF7A00AD65B7 /* SignUpViewController.swift */,
+				E1624E7D2B13E6D400157890 /* DataValidator.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				E1D4E6722AF1AD4D00D5E572 /* ViewController.swift in Sources */,
 				E1C3003C2B12BF7A00AD65B7 /* SignUpViewController.swift in Sources */,
 				E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */,
+				E1624E7E2B13E6D400157890 /* DataValidator.swift in Sources */,
 				E1C300422B12DCCD00AD65B7 /* HomeController.swift in Sources */,
 				E1D4E66E2AF1AD4D00D5E572 /* AppDelegate.swift in Sources */,
 				E1E707DF2B13C223000310FB /* UIViewExtension.swift in Sources */,
