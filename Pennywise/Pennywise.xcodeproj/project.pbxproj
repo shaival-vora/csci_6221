@@ -27,6 +27,7 @@
 		E1D4E68F2AF1AD4F00D5E572 /* PennywiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4E68E2AF1AD4F00D5E572 /* PennywiseUITests.swift */; };
 		E1D4E6912AF1AD4F00D5E572 /* PennywiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4E6902AF1AD4F00D5E572 /* PennywiseUITestsLaunchTests.swift */; };
 		E1E707DA2B13A427000310FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E1E707D92B13A427000310FB /* FirebaseAuth */; };
+		E1E707DF2B13C223000310FB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E707DE2B13C223000310FB /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		E1D4E68A2AF1AD4F00D5E572 /* PennywiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PennywiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D4E68E2AF1AD4F00D5E572 /* PennywiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PennywiseUITests.swift; sourceTree = "<group>"; };
 		E1D4E6902AF1AD4F00D5E572 /* PennywiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PennywiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1E707DE2B13C223000310FB /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,13 +100,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1624E7B2B13D4BB00157890 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E1D4E6712AF1AD4D00D5E572 /* ViewController.swift */,
+				E1C3003B2B12BF7A00AD65B7 /* SignUpViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E1624E7C2B13DCB800157890 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1C300392B12B1FE00AD65B7 /* UITapGestureRecognizerExtension.swift */,
+				E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */,
+				E1C300302B129DD500AD65B7 /* UIColorExtension.swift */,
+				E1E707DE2B13C223000310FB /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E1C3002F2B129DB400AD65B7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				E1C300302B129DD500AD65B7 /* UIColorExtension.swift */,
+				E1624E7C2B13DCB800157890 /* Extensions */,
 				E1C300322B129F6800AD65B7 /* CommonStrings.swift */,
-				E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */,
-				E1C300392B12B1FE00AD65B7 /* UITapGestureRecognizerExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -156,6 +176,7 @@
 		E1D4E66C2AF1AD4D00D5E572 /* Pennywise */ = {
 			isa = PBXGroup;
 			children = (
+				E1624E7B2B13D4BB00157890 /* Authentication */,
 				E1C300492B133CE800AD65B7 /* GoogleService-Info.plist */,
 				E1C300432B12DE0D00AD65B7 /* ProfileScreen */,
 				E1C300402B12DCB800AD65B7 /* HomeScreen */,
@@ -163,12 +184,10 @@
 				E1C3002F2B129DB400AD65B7 /* Utility */,
 				E1D4E66D2AF1AD4D00D5E572 /* AppDelegate.swift */,
 				E1D4E66F2AF1AD4D00D5E572 /* SceneDelegate.swift */,
-				E1D4E6712AF1AD4D00D5E572 /* ViewController.swift */,
 				E1D4E6732AF1AD4D00D5E572 /* Main.storyboard */,
 				E1D4E6762AF1AD4F00D5E572 /* Assets.xcassets */,
 				E1D4E6782AF1AD4F00D5E572 /* LaunchScreen.storyboard */,
 				E1D4E67B2AF1AD4F00D5E572 /* Info.plist */,
-				E1C3003B2B12BF7A00AD65B7 /* SignUpViewController.swift */,
 			);
 			path = Pennywise;
 			sourceTree = "<group>";
@@ -335,6 +354,7 @@
 				E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */,
 				E1C300422B12DCCD00AD65B7 /* HomeController.swift in Sources */,
 				E1D4E66E2AF1AD4D00D5E572 /* AppDelegate.swift in Sources */,
+				E1E707DF2B13C223000310FB /* UIViewExtension.swift in Sources */,
 				E1C3003A2B12B1FE00AD65B7 /* UITapGestureRecognizerExtension.swift in Sources */,
 				E1C300452B12DE2000AD65B7 /* ProfileController.swift in Sources */,
 				E1D4E6702AF1AD4D00D5E572 /* SceneDelegate.swift in Sources */,

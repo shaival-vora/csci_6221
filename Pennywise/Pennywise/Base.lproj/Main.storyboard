@@ -184,6 +184,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonClick:" destination="eoY-qL-Nld" eventType="touchUpInside" id="fly-fG-xLr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v48-xX-VN8"/>

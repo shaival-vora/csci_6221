@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.resetData()
         self.setUpInitialData()
+        
     }
     
     private func resetData() {
