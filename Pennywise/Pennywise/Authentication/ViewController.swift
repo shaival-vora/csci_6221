@@ -21,9 +21,33 @@ class ViewController: UIViewController {
     
     
     @IBAction func loginButtonClick(_ sender: Any) {
-        let mainTabBarController = TabbarController()
-        navigationController?.isNavigationBarHidden = true
-        navigationController?.pushViewController(mainTabBarController, animated: false)
+        if usernameTextView.text.isEmpty == true {
+            self.showToast(message: "Enter a valid Email ID")
+            return
+        }
+        
+        if passwordTextView.text.isEmpty == true {
+            self.showToast(message: "Enter a password")
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: usernameTextView.text ?? "" ,
+                           password: passwordTextView.text ?? "") { [weak self] authResult, error in
+            guard error == nil else {
+                self?.showToast(message: "Error in logging in: \(error?.localizedDescription ?? "Error in Logging in!")")
+                return
+            }
+            
+            if Auth.auth().currentUser != nil {
+                let mainTabBarController = TabbarController()
+                self?.navigationController?.isNavigationBarHidden = true
+                self?.navigationController?.pushViewController(mainTabBarController, animated: false)
+            }
+            
+        }
+            
+            
+        
     }
     
     override func viewDidLoad() {
@@ -33,6 +57,7 @@ class ViewController: UIViewController {
         
     }
     
+    // resetData function reset all the fields data back to empty state
     private func resetData() {
         titleLabel.text = ""
         subtitleLabel.text = ""
@@ -45,6 +70,7 @@ class ViewController: UIViewController {
                              for: .normal)
     }
     
+    // setRoundedCorners func set the round corners for the email and password text view
     private func setRoundedCorners() {
         usernameTextView.layer.cornerRadius = 8
         passwordTextView.layer.cornerRadius = 8
@@ -114,8 +140,8 @@ class ViewController: UIViewController {
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let destinationVC = storyboard.instantiateViewController(withIdentifier: "SignUpView") as? SignUpViewController {
-            destinationVC.modalPresentationStyle = .overFullScreen
-            present(destinationVC, animated: true)
+            self.navigationController?.isNavigationBarHidden = true
+            self.navigationController?.pushViewController(destinationVC, animated: true)
         }
     }
 }

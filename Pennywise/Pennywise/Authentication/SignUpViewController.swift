@@ -61,6 +61,7 @@ final class SignUpViewController: UIViewController {
         setUpFullNameLabel()
         setUpEmailLabel()
         setUpPasswordLabel()
+        setUpConfirmPasswordLabel()
         setUpSignUpButton()
     }
     
@@ -95,9 +96,8 @@ final class SignUpViewController: UIViewController {
             return
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let destinationVC = storyboard.instantiateViewController(withIdentifier: "LoginView") as? ViewController {
-            destinationVC.modalPresentationStyle = .overFullScreen
-            dismiss(animated: true)
+        if let _ = storyboard.instantiateViewController(withIdentifier: "LoginView") as? ViewController {
+            self.navigationController?.popViewController(animated: true)
         }
     }
     
@@ -123,12 +123,15 @@ final class SignUpViewController: UIViewController {
         passwordLabel.font = UIFont.systemFont(ofSize: 14)
         passwordTextField.placeholder = CommonStrings.SignUp.password.value()
         passwordTextField.backgroundColor = UIColor.grayLight4
-        
+    }
+    
+    private func setUpConfirmPasswordLabel() {
         confirmPasswordLabel.text = CommonStrings.SignUp.confirmPassword.value()
         confirmPasswordLabel.font = UIFont.systemFont(ofSize: 14)
         confirmPasswordLabel.textColor = UIColor.blackHigh
         confirmPasswordTextField.placeholder = CommonStrings.SignUp.confirmPassword.value()
         confirmPasswordTextField.backgroundColor = UIColor.grayLight4
+
     }
     
     private func setUpSignUpButton() {
@@ -182,14 +185,15 @@ final class SignUpViewController: UIViewController {
         }
         
         Auth.auth().createUser(withEmail: emailId,
-                               password: password) { (result, error) in
+                               password: password) { [weak self] (result, error) in
                     if let error = error {
-                        // Handle signup error
-                        print("Signup failed: \(error.localizedDescription)")
+                        // Handle signup error message
+                        self?.showToast(message: "Signup failed: \(error.localizedDescription)")
                     } else {
                         // Signup successful
-                        print("Signup successful")
-                        // Navigate to the next screen or update UI as needed
+                        let mainTabBarController = TabbarController()
+                        self?.navigationController?.isNavigationBarHidden = true
+                        self?.navigationController?.pushViewController(mainTabBarController, animated: false)
                     }
                 }
     }
