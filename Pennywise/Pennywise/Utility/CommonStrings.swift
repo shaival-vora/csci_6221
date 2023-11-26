@@ -22,7 +22,20 @@ struct CommonStrings {
         func value() -> String {
             return self.rawValue
         }
+    }
+    
+    enum SignUp: String {
+        case welcomeLabel = "Ready to begin\nSign up here"
+        case signInLabel = "Already a member? Sign In"
+        case signIn = "Sign In"
+        case fullName = "Enter Full Name"
+        case email = "Enter Email ID"
+        case password = "Enter Password"
+        case confirmPassword = "Confirm Password"
+        case signUp = "Sign Up"
         
-        
+        func value() -> String {
+            return self.rawValue
+        }
     }
 }

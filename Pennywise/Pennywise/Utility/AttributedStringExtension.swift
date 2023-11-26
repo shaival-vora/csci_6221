@@ -34,7 +34,7 @@ extension NSAttributedString {
                                     textColor: UIColor,
                                     targetString: String,
                                     targetColor: UIColor) -> NSAttributedString {
-        var attributes: [NSAttributedString.Key: Any] = [
+        let attributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: fontSize),
             .foregroundColor: textColor
         ]
