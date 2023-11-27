@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E1624E7E2B13E6D400157890 /* DataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1624E7D2B13E6D400157890 /* DataValidator.swift */; };
+		E1624E842B1419C400157890 /* CommonUITableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1624E832B1419C400157890 /* CommonUITableView.storyboard */; };
+		E1624E862B1419E700157890 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1624E852B1419E700157890 /* CommonTableViewController.swift */; };
 		E1C300312B129DD500AD65B7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300302B129DD500AD65B7 /* UIColorExtension.swift */; };
 		E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300322B129F6800AD65B7 /* CommonStrings.swift */; };
 		E1C300382B12AD8B00AD65B7 /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		E1624E7D2B13E6D400157890 /* DataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidator.swift; sourceTree = "<group>"; };
+		E1624E832B1419C400157890 /* CommonUITableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonUITableView.storyboard; sourceTree = "<group>"; };
+		E1624E852B1419E700157890 /* CommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
 		E1C300302B129DD500AD65B7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E1C300322B129F6800AD65B7 /* CommonStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStrings.swift; sourceTree = "<group>"; };
 		E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -123,6 +127,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E1624E822B14199B00157890 /* CommonTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E1624E832B1419C400157890 /* CommonUITableView.storyboard */,
+				E1624E852B1419E700157890 /* CommonTableViewController.swift */,
+			);
+			path = CommonTableView;
+			sourceTree = "<group>";
+		};
 		E1C3002F2B129DB400AD65B7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 		E1D4E66C2AF1AD4D00D5E572 /* Pennywise */ = {
 			isa = PBXGroup;
 			children = (
+				E1624E822B14199B00157890 /* CommonTableView */,
 				E1624E7B2B13D4BB00157890 /* Authentication */,
 				E1C300492B133CE800AD65B7 /* GoogleService-Info.plist */,
 				E1C300432B12DE0D00AD65B7 /* ProfileScreen */,
@@ -324,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D4E67A2AF1AD4F00D5E572 /* LaunchScreen.storyboard in Resources */,
+				E1624E842B1419C400157890 /* CommonUITableView.storyboard in Resources */,
 				E1C3004A2B133CE800AD65B7 /* GoogleService-Info.plist in Resources */,
 				E1D4E6772AF1AD4F00D5E572 /* Assets.xcassets in Resources */,
 				E1D4E6752AF1AD4D00D5E572 /* Main.storyboard in Resources */,
@@ -357,6 +372,7 @@
 				E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */,
 				E1624E7E2B13E6D400157890 /* DataValidator.swift in Sources */,
 				E1C300422B12DCCD00AD65B7 /* HomeController.swift in Sources */,
+				E1624E862B1419E700157890 /* CommonTableViewController.swift in Sources */,
 				E1D4E66E2AF1AD4D00D5E572 /* AppDelegate.swift in Sources */,
 				E1E707DF2B13C223000310FB /* UIViewExtension.swift in Sources */,
 				E1C3003A2B12B1FE00AD65B7 /* UITapGestureRecognizerExtension.swift in Sources */,
