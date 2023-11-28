@@ -135,8 +135,7 @@
 		E1371FCC2B15220900B0CD14 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				E1371FCD2B15222C00B0CD14 /* HomeHeaderView.xib */,
-				E1371FCF2B15223B00B0CD14 /* HomeHeaderView.swift */,
+				E1BF7E672B15BB2100AE9303 /* Views */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -235,6 +234,15 @@
 				E1624E7D2B13E6D400157890 /* DataValidator.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		E1BF7E672B15BB2100AE9303 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1371FCF2B15223B00B0CD14 /* HomeHeaderView.swift */,
+				E1371FCD2B15222C00B0CD14 /* HomeHeaderView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E1C3002F2B129DB400AD65B7 /* Utility */ = {
