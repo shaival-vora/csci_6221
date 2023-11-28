@@ -17,20 +17,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ymT-NA-CFH">
-                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                        <rect key="frame" x="8" y="8" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="48" id="6wh-b7-Vyd"/>
-                            <constraint firstAttribute="height" constant="48" id="iiD-qh-QMB"/>
+                            <constraint firstAttribute="width" constant="40" id="6wh-b7-Vyd"/>
+                            <constraint firstAttribute="height" constant="40" id="iiD-qh-QMB"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOn-So-aHi">
-                        <rect key="frame" x="64" y="8" width="41.333333333333343" height="21"/>
+                        <rect key="frame" x="56" y="8" width="41.333333333333343" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNq-aX-cZm">
-                        <rect key="frame" x="64" y="37" width="41.333333333333343" height="21"/>
+                        <rect key="frame" x="56" y="37" width="41.333333333333343" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

@@ -9,8 +9,14 @@ import UIKit
 
 final class TransactionSectionHandler: NSObject, SectionHandler {
     
+    let viewModel: TransactionSectionViewModel?
+    
+    init(viewModel: TransactionSectionViewModel?) {
+        self.viewModel = viewModel
+    }
+    
     var numberOfRows: Int {
-        return 100
+        return self.viewModel?.numberOfRows ?? 1
     }
     
     func getReuseableIdentifiers() -> [String] {
@@ -23,7 +29,7 @@ final class TransactionSectionHandler: NSObject, SectionHandler {
             return UITableViewCell()
         }
         cell.resetData()
-        cell.recentTransactionDataSetup()
+        cell.recentTransactionDataSetup(recentTransaction: self.viewModel?.setUpTransactionData(index: indexPath.row))
         cell.selectionStyle = .none
         cell.backgroundColor = UIColor.white
         

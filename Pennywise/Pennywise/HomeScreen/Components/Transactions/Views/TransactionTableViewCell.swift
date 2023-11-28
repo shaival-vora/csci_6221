@@ -16,18 +16,12 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var transactionAmountLabel: UILabel!
     @IBOutlet weak var transactionDateLabel: UILabel!
     
-    
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func resetData() {
@@ -38,28 +32,29 @@ class TransactionTableViewCell: UITableViewCell {
         transactionDateLabel.text = ""
     }
     
-    func recentTransactionDataSetup() {
-        categoryImageView.image = UIImage.init(systemName: "house.fill")
-        transactionLabel.text = "Rent Payment"
+    func recentTransactionDataSetup(recentTransaction: RecentTransactionDataModel?) {
+        categoryImageView.image = recentTransaction?.categoryImage ?? UIImage(named: "others")
+        categoryImageView.contentMode = .scaleAspectFit
+        transactionLabel.text = recentTransaction?.transactionName ?? ""
         transactionLabel.textColor = UIColor.blackHigh
         transactionLabel.font = UIFont.boldSystemFont(ofSize: 22)
         
-        transactionTypeLabel.text = "Housing"
+        transactionTypeLabel.text = recentTransaction?.transactionCategory
         transactionTypeLabel.textColor = UIColor.blackMedium
         transactionTypeLabel.font = UIFont.systemFont(ofSize: 14)
         
-        transactionAmountLabel.text = "-$800"
-        transactionAmountLabel.textColor = UIColor.redDark
+        if recentTransaction?.transactionType.lowercased() == "income" {
+            transactionAmountLabel.text = "+$\(recentTransaction?.amount ?? 0.0)"
+            transactionAmountLabel.textColor = UIColor.greenLight2
+        } else {
+            transactionAmountLabel.text = "-$\(recentTransaction?.amount ?? 0.0)"
+            transactionAmountLabel.textColor = UIColor.redDark
+        }
         transactionAmountLabel.font = UIFont.boldSystemFont(ofSize: 22)
         
-        transactionDateLabel.text = "Nov 27/2023"
+        transactionDateLabel.text = recentTransaction?.transactionDate ?? ""
         transactionDateLabel.textColor = UIColor.blackMedium
         transactionDateLabel.font = UIFont.systemFont(ofSize: 14)
     }
-    
-}
-
-
-struct TransactionDataModel {
     
 }
