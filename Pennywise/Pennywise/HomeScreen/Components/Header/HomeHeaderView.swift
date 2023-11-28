@@ -25,11 +25,8 @@ final class HomeHeaderView: UIView {
     
     func setBackgroundColor() {
         mainBacgroundView.backgroundColor = UIColor.greenLight3
-        incomeView.backgroundColor = UIColor.white
-        expenseView.backgroundColor = UIColor.white
-        incomeView.layer.shadowColor = UIColor.blackLow.cgColor
-        incomeView.layer.shadowOffset = .zero
-        incomeView.layer.shadowRadius = 3
+        incomeView.backgroundColor = UIColor.grayLight5
+        expenseView.backgroundColor = UIColor.grayLight5
     }
     
     func setRoundedCorners() {
@@ -53,7 +50,6 @@ final class HomeHeaderView: UIView {
         totalBalanceLabel.textColor = UIColor.white
         totalBalanceLabel.font = UIFont.systemFont(ofSize: 12)
         
-        
         totalBalanceCountLabel.text = "$ 24000"
         totalBalanceCountLabel.textColor = UIColor.white
         totalBalanceCountLabel.font = UIFont.boldSystemFont(ofSize: 24)
@@ -73,14 +69,6 @@ final class HomeHeaderView: UIView {
         expenseLabel.text  = "$ 26000"
         expenseLabel.textColor = UIColor.blackMedium
         expenseLabel.font = UIFont.boldSystemFont(ofSize: 24)
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
 }
