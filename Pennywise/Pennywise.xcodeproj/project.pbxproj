@@ -17,6 +17,8 @@
 		E1BF7E602B1578CB00AE9303 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1BF7E5E2B1578CB00AE9303 /* TransactionTableViewCell.xib */; };
 		E1BF7E6C2B15BBC100AE9303 /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E6B2B15BBC100AE9303 /* TransactionController.swift */; };
 		E1BF7E6E2B15BBE400AE9303 /* TransactionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BF7E6D2B15BBE400AE9303 /* TransactionView.storyboard */; };
+		E1BF7E702B165ED300AE9303 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E1BF7E6F2B165ED300AE9303 /* FirebaseDatabase */; };
+		E1BF7E732B167EBE00AE9303 /* AddTransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E722B167EBE00AE9303 /* AddTransactionData.swift */; };
 		E1C300312B129DD500AD65B7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300302B129DD500AD65B7 /* UIColorExtension.swift */; };
 		E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300322B129F6800AD65B7 /* CommonStrings.swift */; };
 		E1C300382B12AD8B00AD65B7 /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */; };
@@ -68,6 +70,7 @@
 		E1BF7E5E2B1578CB00AE9303 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		E1BF7E6B2B15BBC100AE9303 /* TransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
 		E1BF7E6D2B15BBE400AE9303 /* TransactionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionView.storyboard; sourceTree = "<group>"; };
+		E1BF7E722B167EBE00AE9303 /* AddTransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionData.swift; sourceTree = "<group>"; };
 		E1C300302B129DD500AD65B7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E1C300322B129F6800AD65B7 /* CommonStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStrings.swift; sourceTree = "<group>"; };
 		E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BF7E702B165ED300AE9303 /* FirebaseDatabase in Frameworks */,
 				E1C3004D2B133DFA00AD65B7 /* FirebaseAnalytics in Frameworks */,
 				E1E707DA2B13A427000310FB /* FirebaseAuth in Frameworks */,
 			);
@@ -252,6 +256,7 @@
 		E1BF7E682B15BB9800AE9303 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				E1BF7E712B167EB000AE9303 /* Model */,
 				E1BF7E6A2B15BBAF00AE9303 /* Views */,
 				E1BF7E692B15BBA700AE9303 /* Helper */,
 			);
@@ -272,6 +277,14 @@
 				E1BF7E6D2B15BBE400AE9303 /* TransactionView.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1BF7E712B167EB000AE9303 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1BF7E722B167EBE00AE9303 /* AddTransactionData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E1C3002F2B129DB400AD65B7 /* Utility */ = {
@@ -386,6 +399,7 @@
 			packageProductDependencies = (
 				E1C3004C2B133DFA00AD65B7 /* FirebaseAnalytics */,
 				E1E707D92B13A427000310FB /* FirebaseAuth */,
+				E1BF7E6F2B165ED300AE9303 /* FirebaseDatabase */,
 			);
 			productName = Pennywise;
 			productReference = E1D4E66A2AF1AD4D00D5E572 /* Pennywise.app */;
@@ -521,6 +535,7 @@
 				E1371FD02B15223B00B0CD14 /* HomeHeaderView.swift in Sources */,
 				E1624E862B1419E700157890 /* CommonTableViewController.swift in Sources */,
 				E1D4E66E2AF1AD4D00D5E572 /* AppDelegate.swift in Sources */,
+				E1BF7E732B167EBE00AE9303 /* AddTransactionData.swift in Sources */,
 				E1E707DF2B13C223000310FB /* UIViewExtension.swift in Sources */,
 				E1C3003A2B12B1FE00AD65B7 /* UITapGestureRecognizerExtension.swift in Sources */,
 				E1C300452B12DE2000AD65B7 /* ProfileController.swift in Sources */,
@@ -881,6 +896,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E1BF7E6F2B165ED300AE9303 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1C3004B2B133DFA00AD65B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
 		E1C3004C2B133DFA00AD65B7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E1C3004B2B133DFA00AD65B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
