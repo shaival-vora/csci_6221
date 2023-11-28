@@ -144,9 +144,9 @@
 		E1624E7B2B13D4BB00157890 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				E1D4E6712AF1AD4D00D5E572 /* ViewController.swift */,
-				E1C3003B2B12BF7A00AD65B7 /* SignUpViewController.swift */,
-				E1624E7D2B13E6D400157890 /* DataValidator.swift */,
+				E1BF7E662B15BA5E00AE9303 /* Helper */,
+				E1BF7E652B15BA5200AE9303 /* Views */,
+				E1BF7E642B15BA2C00AE9303 /* Controllers */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -210,6 +210,31 @@
 				E1BF7E5E2B1578CB00AE9303 /* TransactionTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1BF7E642B15BA2C00AE9303 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1C3003B2B12BF7A00AD65B7 /* SignUpViewController.swift */,
+				E1D4E6712AF1AD4D00D5E572 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1BF7E652B15BA5200AE9303 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1D4E6732AF1AD4D00D5E572 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1BF7E662B15BA5E00AE9303 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E1624E7D2B13E6D400157890 /* DataValidator.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		E1C3002F2B129DB400AD65B7 /* Utility */ = {
@@ -280,7 +305,6 @@
 				E1C3002F2B129DB400AD65B7 /* Utility */,
 				E1D4E66D2AF1AD4D00D5E572 /* AppDelegate.swift */,
 				E1D4E66F2AF1AD4D00D5E572 /* SceneDelegate.swift */,
-				E1D4E6732AF1AD4D00D5E572 /* Main.storyboard */,
 				E1D4E6762AF1AD4F00D5E572 /* Assets.xcassets */,
 				E1D4E6782AF1AD4F00D5E572 /* LaunchScreen.storyboard */,
 				E1D4E67B2AF1AD4F00D5E572 /* Info.plist */,
