@@ -33,9 +33,12 @@ final class TabbarController: UITabBarController {
     }
     
     private func setUpTabbar() {
+        let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "HomeView") as? HomeController
         let homeController = self.createTabbar(with: "Home",
                                      and: UIImage(systemName: "house.fill"),
-                                     viewController: HomeController())
+                                               viewController: destinationVC ?? ViewController())
+
         
         let profileController = self.createTabbar(with: "Profile",
                                                   and: UIImage(systemName: "person.fill"),
