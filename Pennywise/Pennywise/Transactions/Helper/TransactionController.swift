@@ -143,11 +143,6 @@ final class TransactionController: UIViewController {
         
         let reference = Database.database().reference()
         let uid = Auth.auth().currentUser?.uid
-        let addTransactionData = AddTransactionData(transactionName: transactionName,
-                                                    transactionAmount: transactionAmount,
-                                                    tranactionType: transactionType,
-                                                    transactionCategory: transactionCategory,
-                                                    transactionDate: transactionDatePicker.date.formatted())
         
         let expenseDict = [
                 "transactionName": transactionName,
@@ -156,7 +151,6 @@ final class TransactionController: UIViewController {
                 "category": transactionCategory,
                 "date": transactionDatePicker.date.formatted()
             ]
-        let data = ["transactionName": transactionName]
         reference.child("users").child(uid ?? "").child("Expenses").childByAutoId().setValue(expenseDict)
         self.showToast(message: "Transaction Entry Recorded")
 
