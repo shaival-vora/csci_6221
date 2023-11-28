@@ -15,6 +15,12 @@ final class HomeController: UIViewController {
     
     private var sectionHandlers: [SectionHandler] = [SectionHandler]()
     
+    
+    lazy var vm: HomeScreenViewModel = {
+        let homeScreenViewModel = HomeScreenViewModel()
+        return homeScreenViewModel
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,7 +29,6 @@ final class HomeController: UIViewController {
         super.viewWillAppear(animated)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        sectionHandlers.append(TransactionSectionHandler())
         tableView.register(UINib(nibName: "TransactionTableViewCell",
                                  bundle: nil),
                            forCellReuseIdentifier: "TransactionTableViewCell")
@@ -36,10 +41,25 @@ final class HomeController: UIViewController {
         super.viewDidAppear(animated)
         view.backgroundColor = UIColor.white
         self.navigationController?.isNavigationBarHidden = true
+        setUpDatasource()
+        
+    }
+    
+    private func setUpDatasource() {
+        self.vm.reloadData = {
+            self.sectionHandlers.removeAll()
+            self.homeHeaderView()
+            
+            if self.vm.setUpRecentTransactionDataModel().count > 0 {
+                self.sectionHandlers.append(TransactionSectionHandler(viewModel: TransactionSectionViewModel(recentTransactionData: self.vm.setUpRecentTransactionDataModel())))
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func homeHeaderView() {
         if let homeView = Bundle.main.loadNibNamed("HomeHeaderView", owner: self, options: nil)?.first as? HomeHeaderView {
+            homeView.removeFromSuperview()
             headerView.addSubview(homeView)
             headerViewHeight.constant = 200
             homeView.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +72,7 @@ final class HomeController: UIViewController {
             
             homeView.setBackgroundColor()
             homeView.setRoundedCorners()
-            homeView.setHeaderData()
+            homeView.setHeaderData(headerData: self.vm.setUpHeaderData())
         }
     }
     
@@ -99,10 +119,4 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
         return sectionHandlers[safe: section]?.tableView(tableView, heightForFooterInSection: section) ?? .zero
     }
 }
-
-
-final class HomeScreenViewModel: NSObject {
-    
-}
-
 
