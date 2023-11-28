@@ -24,6 +24,10 @@ extension UIColor {
         return UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.0)
     }
     
+    public class var grayLight5: UIColor {
+        return UIColor(red: 0.99, green: 0.98, blue: 0.98, alpha: 1.0)
+    }
+    
     public class var redDark: UIColor {
         return UIColor(red: 0.93, green: 0.13, blue: 0.23, alpha: 1)
     }
