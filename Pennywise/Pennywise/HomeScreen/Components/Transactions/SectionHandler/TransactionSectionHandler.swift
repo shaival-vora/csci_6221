@@ -22,20 +22,42 @@ final class TransactionSectionHandler: NSObject, SectionHandler {
                                                        for: indexPath) as? TransactionTableViewCell else {
             return UITableViewCell()
         }
-        cell.textLabel?.text = ""
-        cell.backgroundColor = UIColor.clear
-        cell.textLabel?.text = "World"
+        cell.resetData()
+        cell.recentTransactionDataSetup()
         cell.selectionStyle = .none
-        if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor.redDark
-            cell.textLabel?.text = "Hello"
-        }
+        cell.backgroundColor = UIColor.white
+        
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        let label = UILabel()
+        headerView.backgroundColor = UIColor.white
+        label.text = "Recent Transaction"
+        label.textColor = UIColor.blackMedium
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        headerView.addSubview(label)
+        NSLayoutConstraint.activate([
+                    label.leadingAnchor.constraint(equalTo: headerView.leadingAnchor,
+                                                   constant: 16),
+                    label.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
+                ])
+        
+        if let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderCell") {
+            
+        }
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32
     }
     
 }

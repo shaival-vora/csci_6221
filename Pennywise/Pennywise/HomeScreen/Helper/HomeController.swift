@@ -84,7 +84,7 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return sectionHandlers[safe: section]?.tableView(tableView, viewForFooterInSection: section) ?? UIView()
+        return sectionHandlers[safe: section]?.tableView(tableView, viewForHeaderInSection: section) ?? UIView()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

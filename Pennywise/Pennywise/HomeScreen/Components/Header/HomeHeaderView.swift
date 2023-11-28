@@ -50,23 +50,23 @@ final class HomeHeaderView: UIView {
         totalBalanceLabel.textColor = UIColor.white
         totalBalanceLabel.font = UIFont.systemFont(ofSize: 12)
         
-        totalBalanceCountLabel.text = "$ 24000"
+        totalBalanceCountLabel.text = "$24000"
         totalBalanceCountLabel.textColor = UIColor.white
         totalBalanceCountLabel.font = UIFont.boldSystemFont(ofSize: 24)
         
-        incomeTextLabel.text = "Income"
+        incomeTextLabel.text = "Total Income"
         incomeTextLabel.textColor = UIColor.blackHigh
         incomeTextLabel.font = UIFont.systemFont(ofSize: 12)
         
-        incomeLabel.text  = "$ 40000"
+        incomeLabel.text  = "+$40000"
         incomeLabel.textColor = UIColor.blackMedium
         incomeLabel.font = UIFont.boldSystemFont(ofSize: 24)
         
-        expenceTextLabel.text = "Expense"
+        expenceTextLabel.text = "Total Expense"
         expenceTextLabel.textColor = UIColor.blackHigh
         expenceTextLabel.font = UIFont.systemFont(ofSize: 12)
         
-        expenseLabel.text  = "$ 26000"
+        expenseLabel.text  = "-$26000"
         expenseLabel.textColor = UIColor.blackMedium
         expenseLabel.font = UIFont.boldSystemFont(ofSize: 24)
     }
