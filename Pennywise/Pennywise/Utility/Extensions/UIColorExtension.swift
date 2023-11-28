@@ -33,6 +33,10 @@ extension UIColor {
         return UIColor(red: 0, green: 0.19, blue: 0.94, alpha: 1)
     }
     
+    public class var greenLight3: UIColor {
+        return UIColor(red: 0.35, green: 0.78, blue: 0.54, alpha: 1)
+    }
+    
     // Custom color with hex value
     public class func customColor(hex: String, alpha: CGFloat = 1.0) -> UIColor {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
