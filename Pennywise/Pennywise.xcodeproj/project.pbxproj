@@ -19,6 +19,7 @@
 		E1BF7E6E2B15BBE400AE9303 /* TransactionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BF7E6D2B15BBE400AE9303 /* TransactionView.storyboard */; };
 		E1BF7E702B165ED300AE9303 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E1BF7E6F2B165ED300AE9303 /* FirebaseDatabase */; };
 		E1BF7E732B167EBE00AE9303 /* AddTransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E722B167EBE00AE9303 /* AddTransactionData.swift */; };
+		E1BF7E752B1692F300AE9303 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E742B1692F300AE9303 /* HomeScreenViewModel.swift */; };
 		E1C300312B129DD500AD65B7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300302B129DD500AD65B7 /* UIColorExtension.swift */; };
 		E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300322B129F6800AD65B7 /* CommonStrings.swift */; };
 		E1C300382B12AD8B00AD65B7 /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */; };
@@ -71,6 +72,7 @@
 		E1BF7E6B2B15BBC100AE9303 /* TransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
 		E1BF7E6D2B15BBE400AE9303 /* TransactionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionView.storyboard; sourceTree = "<group>"; };
 		E1BF7E722B167EBE00AE9303 /* AddTransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionData.swift; sourceTree = "<group>"; };
+		E1BF7E742B1692F300AE9303 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		E1C300302B129DD500AD65B7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E1C300322B129F6800AD65B7 /* CommonStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStrings.swift; sourceTree = "<group>"; };
 		E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		E1371FCA2B1521F200B0CD14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E1BF7E742B1692F300AE9303 /* HomeScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				E1624E7E2B13E6D400157890 /* DataValidator.swift in Sources */,
 				E1C300422B12DCCD00AD65B7 /* HomeController.swift in Sources */,
 				E1371FD02B15223B00B0CD14 /* HomeHeaderView.swift in Sources */,
+				E1BF7E752B1692F300AE9303 /* HomeScreenViewModel.swift in Sources */,
 				E1624E862B1419E700157890 /* CommonTableViewController.swift in Sources */,
 				E1D4E66E2AF1AD4D00D5E572 /* AppDelegate.swift in Sources */,
 				E1BF7E732B167EBE00AE9303 /* AddTransactionData.swift in Sources */,
