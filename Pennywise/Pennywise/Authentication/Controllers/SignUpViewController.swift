@@ -7,6 +7,9 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
+import FirebaseDatabaseInternal
+
 /// This is the base view controller which handles the sign up page, which creates a new user account
 final class SignUpViewController: UIViewController {
     
@@ -193,11 +196,21 @@ final class SignUpViewController: UIViewController {
                         self?.showToast(message: "Signup failed: \(error.localizedDescription)")
                     } else {
                         // Signup successful
+                        self?.uploadUserData(name: fullName,
+                                             email: emailId)
                         let mainTabBarController = TabbarController()
                         self?.navigationController?.isNavigationBarHidden = true
-                        self?.navigationController?.pushViewController(mainTabBarController, animated: false)
+                        self?.navigationController?.pushViewController(mainTabBarController,
+                                                                       animated: false)
                     }
                 }
+    }
+    
+    private func uploadUserData(name: String, email: String) {
+        let reference = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        reference.child("users").child(uid ?? "").setValue(["name": name,
+                                                            "emailID": email])
     }
     
     
