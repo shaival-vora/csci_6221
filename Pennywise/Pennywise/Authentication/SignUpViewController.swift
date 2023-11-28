@@ -123,6 +123,7 @@ final class SignUpViewController: UIViewController {
         passwordLabel.font = UIFont.systemFont(ofSize: 14)
         passwordTextField.placeholder = CommonStrings.SignUp.password.value()
         passwordTextField.backgroundColor = UIColor.grayLight4
+        passwordTextField.isSecureTextEntry = true
     }
     
     private func setUpConfirmPasswordLabel() {
@@ -131,6 +132,7 @@ final class SignUpViewController: UIViewController {
         confirmPasswordLabel.textColor = UIColor.blackHigh
         confirmPasswordTextField.placeholder = CommonStrings.SignUp.confirmPassword.value()
         confirmPasswordTextField.backgroundColor = UIColor.grayLight4
+        confirmPasswordTextField.isSecureTextEntry = true
 
     }
     

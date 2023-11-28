@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextView: UITextView!
     @IBOutlet weak var loginButton: UIButton!
     
+    var originalPassword: String?
+    
     
     @IBAction func loginButtonClick(_ sender: Any) {
         if usernameTextView.text.isEmpty == true {
@@ -32,7 +34,7 @@ class ViewController: UIViewController {
         }
         
         Auth.auth().signIn(withEmail: usernameTextView.text ?? "" ,
-                           password: passwordTextView.text ?? "") { [weak self] authResult, error in
+                           password: originalPassword ?? "") { [weak self] authResult, error in
             guard error == nil else {
                 self?.showToast(message: "Error in logging in: \(error?.localizedDescription ?? "Error in Logging in!")")
                 return
@@ -45,9 +47,6 @@ class ViewController: UIViewController {
             }
             
         }
-            
-            
-        
     }
     
     override func viewDidLoad() {
@@ -113,6 +112,7 @@ class ViewController: UIViewController {
         usernameLabel.text = CommonStrings.Login.email.value()
         usernameLabel.font = UIFont.systemFont(ofSize: 14)
         usernameLabel.textColor = UIColor.blackMedium
+        usernameTextView.font = UIFont.systemFont(ofSize: 20)
         usernameTextView.backgroundColor = UIColor.grayLight4
     }
     
@@ -120,7 +120,9 @@ class ViewController: UIViewController {
         passwordLabel.text = CommonStrings.Login.password.value()
         passwordLabel.font = UIFont.systemFont(ofSize: 14)
         passwordLabel.textColor = UIColor.blackMedium
+        passwordTextView.font = UIFont.systemFont(ofSize: 20)
         passwordTextView.backgroundColor = UIColor.grayLight4
+        passwordTextView.delegate = self
     }
     
     private func setUpLoginButton() {
@@ -143,5 +145,18 @@ class ViewController: UIViewController {
             self.navigationController?.isNavigationBarHidden = true
             self.navigationController?.pushViewController(destinationVC, animated: true)
         }
+    }
+}
+
+
+extension ViewController: UITextViewDelegate {
+
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        originalPassword = ((originalPassword ?? "") as NSString).replacingCharacters(in: range, with: text)
+        return true
+    }
+
+    func textViewDidChange(_ textView: UITextView) {
+        textView.text = String(repeating: "•", count: (textView.text ?? "").count)
     }
 }
