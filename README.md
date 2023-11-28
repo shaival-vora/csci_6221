@@ -16,14 +16,16 @@ Monthly Reports: Get insightful monthly reports and visualizations to understand
 Multi-User Support: Collaborate with your team or family by adding multiple users to the app.
 
 # Team
-Leon De Noronha
-Shaival Vora
-Yiqi Liu
-Pooja Srinivasan
+- Leon De Noronha (G40731289)
+- Shaival Vora (G37099269)
+- Yiqi Liu (G45109696)
+- Pooja Srinivasan (G33105018)
+- Dilip Siddalingha Prasad (G41296129)
 
 # Getting Started
-Clone the repository: git clone https://github.com/your-username/pennywise.git
-Open the project in Xcode.
-Build and run the app on your simulator or device.
-Contributing
+1. Clone the repository: git clone https://github.com/your-username/pennywise.git
+2. Open the project in Xcode.
+3. Build and run the app on your simulator or device.
+   
+# Contributing
 We welcome contributions! Please follow our contribution guidelines to contribute to Pennywise.
