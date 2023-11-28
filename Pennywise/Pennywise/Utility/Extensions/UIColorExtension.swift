@@ -37,6 +37,11 @@ extension UIColor {
         return UIColor(red: 0, green: 0.19, blue: 0.94, alpha: 1)
     }
     
+    //76, 187, 23
+    public class var greenLight2: UIColor {
+        return UIColor(red: 0.29, green: 0.78, blue: 0.09, alpha: 1)
+    }
+    
     public class var greenLight3: UIColor {
         return UIColor(red: 0.35, green: 0.78, blue: 0.54, alpha: 1)
     }

@@ -59,7 +59,7 @@ final class HomeHeaderView: UIView {
         incomeTextLabel.font = UIFont.systemFont(ofSize: 12)
         
         incomeLabel.text  = "+$40000"
-        incomeLabel.textColor = UIColor.blackMedium
+        incomeLabel.textColor = UIColor.greenLight2
         incomeLabel.font = UIFont.boldSystemFont(ofSize: 24)
         
         expenceTextLabel.text = "Total Expense"
@@ -67,7 +67,7 @@ final class HomeHeaderView: UIView {
         expenceTextLabel.font = UIFont.systemFont(ofSize: 12)
         
         expenseLabel.text  = "-$26000"
-        expenseLabel.textColor = UIColor.blackMedium
+        expenseLabel.textColor = UIColor.redDark
         expenseLabel.font = UIFont.boldSystemFont(ofSize: 24)
     }
     

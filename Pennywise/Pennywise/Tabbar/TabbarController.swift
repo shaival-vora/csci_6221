@@ -43,9 +43,14 @@ final class TabbarController: UITabBarController {
         let profileController = self.createTabbar(with: "Profile",
                                                   and: UIImage(systemName: "person.fill"),
                                                   viewController: ProfileController())
+        
+        let transactionController = self.createTabbar(with: "Transactions",
+                                                      and: UIImage(systemName: "plus.circle.fill"),
+                                                      viewController: UIViewController())
    
         
         self.setViewControllers([homeController,
+                                 transactionController,
                                  profileController],
                                 animated: true)
     }

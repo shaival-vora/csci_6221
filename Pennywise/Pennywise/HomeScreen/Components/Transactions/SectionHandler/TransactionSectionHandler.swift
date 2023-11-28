@@ -49,10 +49,6 @@ final class TransactionSectionHandler: NSObject, SectionHandler {
                                                    constant: 16),
                     label.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
                 ])
-        
-        if let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderCell") {
-            
-        }
         return headerView
     }
     
