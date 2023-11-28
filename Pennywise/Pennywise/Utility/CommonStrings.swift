@@ -38,4 +38,21 @@ struct CommonStrings {
             return self.rawValue
         }
     }
+    
+    enum Transaction: String {
+        case header = "Add Transactions"
+        case title = "Transaction title"
+        case amount = "Amount"
+        case category = "Transaction Category"
+        case date = "Transaction Date"
+        case type = "Transaction Type"
+        
+        enum TextFieldPlaceholder: String {
+            case type = "Select Transaction Type"
+            case category = "Select Transaction Category"
+            case amount = "Enter Amount"
+            case error = "Data Not Found"
+            case name = "Enter Transaction Name"
+        }
+    }
 }
