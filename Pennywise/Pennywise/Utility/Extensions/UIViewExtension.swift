@@ -30,7 +30,7 @@ extension UIViewController {
         toastView.addSubview(label)
         view.addSubview(toastView)
         
-        // Constraints: Adding Constraints so that the toast view is kept at the bottom the screen 
+        // Constraints: Adding Constraints so that the toast view is kept at the bottom the screen
         toastView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -68,5 +68,11 @@ extension UIViewController {
                 toastView.removeFromSuperview()
             })
         })
+    }
+}
+
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }
