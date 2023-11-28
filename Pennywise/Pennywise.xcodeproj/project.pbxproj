@@ -20,6 +20,9 @@
 		E1BF7E702B165ED300AE9303 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E1BF7E6F2B165ED300AE9303 /* FirebaseDatabase */; };
 		E1BF7E732B167EBE00AE9303 /* AddTransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E722B167EBE00AE9303 /* AddTransactionData.swift */; };
 		E1BF7E752B1692F300AE9303 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E742B1692F300AE9303 /* HomeScreenViewModel.swift */; };
+		E1BF7E782B16B14A00AE9303 /* TransactionSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E772B16B14A00AE9303 /* TransactionSectionViewModel.swift */; };
+		E1BF7E7B2B16B17A00AE9303 /* HeaderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E7A2B16B17A00AE9303 /* HeaderDataModel.swift */; };
+		E1BF7E7D2B16B18C00AE9303 /* RecentTransactionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E7C2B16B18C00AE9303 /* RecentTransactionDataModel.swift */; };
 		E1C300312B129DD500AD65B7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300302B129DD500AD65B7 /* UIColorExtension.swift */; };
 		E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300322B129F6800AD65B7 /* CommonStrings.swift */; };
 		E1C300382B12AD8B00AD65B7 /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */; };
@@ -73,6 +76,9 @@
 		E1BF7E6D2B15BBE400AE9303 /* TransactionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionView.storyboard; sourceTree = "<group>"; };
 		E1BF7E722B167EBE00AE9303 /* AddTransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionData.swift; sourceTree = "<group>"; };
 		E1BF7E742B1692F300AE9303 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		E1BF7E772B16B14A00AE9303 /* TransactionSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSectionViewModel.swift; sourceTree = "<group>"; };
+		E1BF7E7A2B16B17A00AE9303 /* HeaderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDataModel.swift; sourceTree = "<group>"; };
+		E1BF7E7C2B16B18C00AE9303 /* RecentTransactionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionDataModel.swift; sourceTree = "<group>"; };
 		E1C300302B129DD500AD65B7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E1C300322B129F6800AD65B7 /* CommonStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStrings.swift; sourceTree = "<group>"; };
 		E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 		E1BF7E582B15774B00AE9303 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				E1BF7E762B16B13E00AE9303 /* ViewModel */,
 				E1BF7E5C2B15788B00AE9303 /* Views */,
 				E1BF7E5B2B15787500AE9303 /* SectionHandler */,
 			);
@@ -290,6 +297,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E1BF7E762B16B13E00AE9303 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1BF7E772B16B14A00AE9303 /* TransactionSectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1BF7E792B16B16800AE9303 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1BF7E7A2B16B17A00AE9303 /* HeaderDataModel.swift */,
+				E1BF7E7C2B16B18C00AE9303 /* RecentTransactionDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E1C3002F2B129DB400AD65B7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +334,7 @@
 		E1C300402B12DCB800AD65B7 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				E1BF7E792B16B16800AE9303 /* Models */,
 				E1371FCB2B1521FA00B0CD14 /* Components */,
 				E1371FCA2B1521F200B0CD14 /* ViewModel */,
 				E1624E8C2B147FDD00157890 /* Helper */,
@@ -537,14 +562,17 @@
 				E1C300422B12DCCD00AD65B7 /* HomeController.swift in Sources */,
 				E1371FD02B15223B00B0CD14 /* HomeHeaderView.swift in Sources */,
 				E1BF7E752B1692F300AE9303 /* HomeScreenViewModel.swift in Sources */,
+				E1BF7E782B16B14A00AE9303 /* TransactionSectionViewModel.swift in Sources */,
 				E1624E862B1419E700157890 /* CommonTableViewController.swift in Sources */,
 				E1D4E66E2AF1AD4D00D5E572 /* AppDelegate.swift in Sources */,
 				E1BF7E732B167EBE00AE9303 /* AddTransactionData.swift in Sources */,
+				E1BF7E7B2B16B17A00AE9303 /* HeaderDataModel.swift in Sources */,
 				E1E707DF2B13C223000310FB /* UIViewExtension.swift in Sources */,
 				E1C3003A2B12B1FE00AD65B7 /* UITapGestureRecognizerExtension.swift in Sources */,
 				E1C300452B12DE2000AD65B7 /* ProfileController.swift in Sources */,
 				E1BF7E6C2B15BBC100AE9303 /* TransactionController.swift in Sources */,
 				E1D4E6702AF1AD4D00D5E572 /* SceneDelegate.swift in Sources */,
+				E1BF7E7D2B16B18C00AE9303 /* RecentTransactionDataModel.swift in Sources */,
 				E1C3003F2B12D9D100AD65B7 /* TabbarController.swift in Sources */,
 				E1C300312B129DD500AD65B7 /* UIColorExtension.swift in Sources */,
 			);

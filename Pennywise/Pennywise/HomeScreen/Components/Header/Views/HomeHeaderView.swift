@@ -36,13 +36,13 @@ final class HomeHeaderView: UIView {
         mainBacgroundView.layer.cornerRadius = 4
     }
     
-    func setHeaderData() {
+    func setHeaderData(headerData: HeaderDataModel) {
         profileImageView.image = UIImage.init(systemName: "person.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor.blackHigh)
         firstLabel.text = "Hi, Welcome Back"
         firstLabel.textColor = UIColor.white
         firstLabel.font = UIFont.boldSystemFont(ofSize: 20)
         
-        usernameLabel.text = "Shaival Vora"
+        usernameLabel.text = headerData.username
         usernameLabel.textColor = UIColor.white
         usernameLabel.font = UIFont.boldSystemFont(ofSize: 20)
         
@@ -50,7 +50,7 @@ final class HomeHeaderView: UIView {
         totalBalanceLabel.textColor = UIColor.white
         totalBalanceLabel.font = UIFont.systemFont(ofSize: 12)
         
-        totalBalanceCountLabel.text = "$24000"
+        totalBalanceCountLabel.text = "$\(headerData.totalBalance)"
         totalBalanceCountLabel.textColor = UIColor.white
         totalBalanceCountLabel.font = UIFont.boldSystemFont(ofSize: 24)
         
@@ -58,17 +58,19 @@ final class HomeHeaderView: UIView {
         incomeTextLabel.textColor = UIColor.blackHigh
         incomeTextLabel.font = UIFont.systemFont(ofSize: 12)
         
-        incomeLabel.text  = "+$40000"
+        incomeLabel.text  = "+$\(headerData.totalIncome)"
         incomeLabel.textColor = UIColor.greenLight2
-        incomeLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        incomeLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        incomeLabel.adjustsFontSizeToFitWidth = true
         
         expenceTextLabel.text = "Total Expense"
         expenceTextLabel.textColor = UIColor.blackHigh
         expenceTextLabel.font = UIFont.systemFont(ofSize: 12)
         
-        expenseLabel.text  = "-$26000"
+        expenseLabel.text  = "-$\(headerData.totalExpense)"
         expenseLabel.textColor = UIColor.redDark
-        expenseLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        expenseLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        expenseLabel.adjustsFontSizeToFitWidth = true
     }
     
 }
