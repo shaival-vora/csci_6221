@@ -33,10 +33,10 @@ final class TabbarController: UITabBarController {
     }
     
     private func setUpTabbar() {
-        let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "HomeView") as? HomeController
+        let homeStoryboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+        let destinationVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeView") as? HomeController
         let homeController = self.createTabbar(with: "Home",
-                                     and: UIImage(systemName: "house.fill"),
+                                               and: UIImage(systemName: "house.fill"),
                                                viewController: destinationVC ?? ViewController())
 
         
@@ -44,9 +44,11 @@ final class TabbarController: UITabBarController {
                                                   and: UIImage(systemName: "person.fill"),
                                                   viewController: ProfileController())
         
+        let transactionStoryboard = UIStoryboard(name: "TransactionView", bundle: nil)
+        let transactionViewController = transactionStoryboard.instantiateViewController(withIdentifier: "transactionView") as? TransactionController
         let transactionController = self.createTabbar(with: "Transactions",
                                                       and: UIImage(systemName: "plus.circle.fill"),
-                                                      viewController: UIViewController())
+                                                      viewController: transactionViewController ?? UIViewController())
    
         
         self.setViewControllers([homeController,
