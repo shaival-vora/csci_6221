@@ -5,7 +5,7 @@
 //  Created by Shaival Vora on 11/28/23.
 //
 
-import Foundation
+import UIKit
 
 struct RecentTransactionDataModel {
     var transactionName: String = ""
