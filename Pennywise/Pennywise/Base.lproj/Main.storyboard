@@ -50,7 +50,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Password Text View" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ha2-Cz-Ccs">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="sssss" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ha2-Cz-Ccs">
                                 <rect key="frame" x="16" y="331" width="361" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
