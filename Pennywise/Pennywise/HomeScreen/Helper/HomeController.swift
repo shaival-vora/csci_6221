@@ -23,6 +23,10 @@ final class HomeController: UIViewController {
         super.viewWillAppear(animated)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        sectionHandlers.append(TransactionSectionHandler())
+        tableView.register(UINib(nibName: "TransactionTableViewCell",
+                                 bundle: nil),
+                           forCellReuseIdentifier: "TransactionTableViewCell")
         self.navigationController?.setStatusBar(backgroundColor: UIColor.greenLight3)
         self.homeHeaderView()
     }
