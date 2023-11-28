@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+struct AddTransactionData: Codable {
+    var transactionName: String
+    var transactionAmount: String
+    var tranactionType: String
+    var transactionCategory: String
+    var transactionDate: String
+}
