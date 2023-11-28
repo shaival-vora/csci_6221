@@ -12,6 +12,9 @@
 		E1624E7E2B13E6D400157890 /* DataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1624E7D2B13E6D400157890 /* DataValidator.swift */; };
 		E1624E862B1419E700157890 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1624E852B1419E700157890 /* CommonTableViewController.swift */; };
 		E1624E8B2B1465F500157890 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1624E8A2B1465F500157890 /* HomeViewController.storyboard */; };
+		E1BF7E5A2B1577EA00AE9303 /* TransactionSectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E592B1577EA00AE9303 /* TransactionSectionHandler.swift */; };
+		E1BF7E5F2B1578CB00AE9303 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7E5D2B1578CB00AE9303 /* TransactionTableViewCell.swift */; };
+		E1BF7E602B1578CB00AE9303 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1BF7E5E2B1578CB00AE9303 /* TransactionTableViewCell.xib */; };
 		E1C300312B129DD500AD65B7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300302B129DD500AD65B7 /* UIColorExtension.swift */; };
 		E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300322B129F6800AD65B7 /* CommonStrings.swift */; };
 		E1C300382B12AD8B00AD65B7 /* AttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */; };
@@ -58,6 +61,9 @@
 		E1624E7D2B13E6D400157890 /* DataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidator.swift; sourceTree = "<group>"; };
 		E1624E852B1419E700157890 /* CommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
 		E1624E8A2B1465F500157890 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		E1BF7E592B1577EA00AE9303 /* TransactionSectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSectionHandler.swift; sourceTree = "<group>"; };
+		E1BF7E5D2B1578CB00AE9303 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		E1BF7E5E2B1578CB00AE9303 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		E1C300302B129DD500AD65B7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E1C300322B129F6800AD65B7 /* CommonStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStrings.swift; sourceTree = "<group>"; };
 		E1C300372B12AD8B00AD65B7 /* AttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 		E1371FCB2B1521FA00B0CD14 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E1BF7E582B15774B00AE9303 /* Transactions */,
 				E1371FCC2B15220900B0CD14 /* Header */,
 			);
 			path = Components;
@@ -177,6 +184,32 @@
 				E1C300412B12DCCD00AD65B7 /* HomeController.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		E1BF7E582B15774B00AE9303 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				E1BF7E5C2B15788B00AE9303 /* Views */,
+				E1BF7E5B2B15787500AE9303 /* SectionHandler */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		E1BF7E5B2B15787500AE9303 /* SectionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				E1BF7E592B1577EA00AE9303 /* TransactionSectionHandler.swift */,
+			);
+			path = SectionHandler;
+			sourceTree = "<group>";
+		};
+		E1BF7E5C2B15788B00AE9303 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1BF7E5D2B1578CB00AE9303 /* TransactionTableViewCell.swift */,
+				E1BF7E5E2B1578CB00AE9303 /* TransactionTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E1C3002F2B129DB400AD65B7 /* Utility */ = {
@@ -387,6 +420,7 @@
 				E1D4E67A2AF1AD4F00D5E572 /* LaunchScreen.storyboard in Resources */,
 				E1371FCE2B15222C00B0CD14 /* HomeHeaderView.xib in Resources */,
 				E1C3004A2B133CE800AD65B7 /* GoogleService-Info.plist in Resources */,
+				E1BF7E602B1578CB00AE9303 /* TransactionTableViewCell.xib in Resources */,
 				E1D4E6772AF1AD4F00D5E572 /* Assets.xcassets in Resources */,
 				E1D4E6752AF1AD4D00D5E572 /* Main.storyboard in Resources */,
 			);
@@ -414,8 +448,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1C300382B12AD8B00AD65B7 /* AttributedStringExtension.swift in Sources */,
+				E1BF7E5F2B1578CB00AE9303 /* TransactionTableViewCell.swift in Sources */,
 				E1D4E6722AF1AD4D00D5E572 /* ViewController.swift in Sources */,
 				E1C3003C2B12BF7A00AD65B7 /* SignUpViewController.swift in Sources */,
+				E1BF7E5A2B1577EA00AE9303 /* TransactionSectionHandler.swift in Sources */,
 				E1C300332B129F6800AD65B7 /* CommonStrings.swift in Sources */,
 				E1624E7E2B13E6D400157890 /* DataValidator.swift in Sources */,
 				E1C300422B12DCCD00AD65B7 /* HomeController.swift in Sources */,
